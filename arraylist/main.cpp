@@ -1,7 +1,15 @@
 #include <iostream>
-
+#include "TList.h"
 int main()
 {
-    std::cout<<"Hello world"<<std::endl;
+    TList<int>c(10);
+    for (int j = 0; j < 5; ++j) {
+        c.InsLast(j);
+    }
+    auto b = c.multiplesToK(2);
+    for(auto&elem:b){
+        std::cout<<elem<<std::endl;
+    }
+
     return 0;
 }
